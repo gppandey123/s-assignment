@@ -6,7 +6,7 @@ export function getData() {
     return fetch("https://api.jikan.moe/v3/search/anime?q=naruto&limit=16")
       .then(response => response.json())
       .then(data => {
-        dispatch({ type: FETCH_DATA, payload:[...data.results] });
+        dispatch({ type: FETCH_DATA, payload:data.results });
       });
   };
 }

@@ -5,7 +5,7 @@ import {getData} from '../../js/actions/index';
 import SingleCard from './SingleCard';
 
  class AllCard extends Component {
-
+    
      state = {
         limit :8
      }
@@ -41,9 +41,11 @@ import SingleCard from './SingleCard';
                <div className="d-flex mx-3 flex-wrap A">
                  {card}
                </div>
-               <button type="button" className="btn btn-primary btn-lg btn-block"
-                        onClick={this.onLoadMore}>
-                 LoadMore</button>  
+
+                <div className="d-flex justify-content-center">
+               <button type="button" className="btn btn-primary btn-lg text-align center"
+                  onClick={this.onLoadMore}>load more</button>  
+                </div>
             </div>
         )
     }

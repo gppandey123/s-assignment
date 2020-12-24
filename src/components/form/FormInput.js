@@ -11,9 +11,9 @@ import { connect } from "react-redux";
     }
     Change =(e) => {
       this.props.getfilterProduct(this.props.filteredItems ,e.target.value)
-      setTimeout(() => {
+        if(e.target.value <1){
         this.props.getData();
-      }, 1500);
+        }
       
     }
     
@@ -24,10 +24,12 @@ import { connect } from "react-redux";
             <div className="container">
             <form onClick={this.onsubmit}>
                <input type="text"
+              
                 placeholder="naruto"
                 value={this.props.searchTerm}
                 onChange = {this.Change}/>
-               <button>Go</button>
+               <button onClick={this.onsubmit}>
+                 Go</button>
             </form> 
             </div>
         )
